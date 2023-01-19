@@ -1,0 +1,327 @@
+$image-url: url(../assets/mainBackground.png);
+$learn-more-image: url(../assets/learn-more-image.png);
+$paragraph-color: #fff;
+$paragraph-font-family: 'Source Sans Pro';
+$oswald-font-family: 'Oswald';
+$paragraph-rgba-color: rgba(255, 255, 255, 0.7);
+$info-section-heading-color: #464547;
+$info-section-description-color: #666666;
+$read-more-button-color: #55C2D8;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main_section {
+    min-height: 100vh;
+    width: 100%;
+    background-image: $image-url;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__logo {
+    color: $paragraph-color;
+    font-family: $paragraph-font-family;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 16px;
+}
+    
+.nav__nav-links {
+    flex: 1;
+    text-align: center;
+}
+.nav__menu .nav__menu-item {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav__menu-item__link {
+    color: $paragraph-color;
+    font-family: $paragraph-font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+    
+.nav__menu .nav__menu-item::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav__menu .nav__menu-item:hover::after {
+    width: 100%;
+}
+
+.titles {
+    width: 90%;
+    color: $paragraph-color;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.titles__image {
+    left: 0%;
+    right: 0.01%;
+    top: 0%;
+    bottom: 0.01%;
+}
+
+.titles__heading {
+    font-family: $oswald-font-family;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+}
+
+.titles__p {
+    font-family: $paragraph-font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: $paragraph-rgba-color;
+    margin-top: 30px;
+}
+
+// Info Section
+
+.info-section {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.info-section__row {
+    // padding: 16px;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    p {
+        font-family: $paragraph-font-family;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: $info-section-description-color;
+    }
+    .row_first_p {
+        padding-right: 50px;
+    }
+}
+
+.info-section__heading {
+    font-family: $oswald-font-family;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    color: $info-section-heading-color;
+}
+
+.info-section__description {
+    margin-top: 40px;
+    font-family: $paragraph-font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: $info-section-description-color;
+}
+
+.info-section__readBtn {
+    padding: 40px 0;
+}
+
+.read-more {
+    padding: 7px 15px;
+    text-decoration: none;
+    border-radius: 18px;
+    background-color: $read-more-button-color;
+    margin: 5px;
+    color: $paragraph-color;
+
+    font-family: $oswald-font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+.info-section__readBtn:hover {
+    transform: rotate(20deg);
+}
+
+// Learn More
+
+.learn-more {
+    min-height: 90vh;
+    width: 100%;
+    background-image: $learn-more-image;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.learn-more__container {
+    padding-top: 80px;
+    text-align: center;
+    h1 {
+        font-family: $oswald-font-family;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 64px;
+        text-align: center;
+        color: $paragraph-color;
+        padding-bottom: 60px;
+    }
+    p {
+        padding-top: 55px;
+        font-family: $paragraph-font-family;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+        color: $paragraph-color;
+    }
+}
+
+.learn-more__play-button {
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.play-button__ellipse {
+    position: relative;
+    width: 145px;
+    top: 0;
+    left: 0;
+}
+
+.play-button__polygon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Footer
+
+
+.footer{
+    display: flex;
+    align-items: stretch;
+    height: 200px;
+    background-color: $info-section-heading-color;
+}
+.footer__logo {
+    flex: 1;
+    padding: 40px 0 0 150px;
+    span {
+        font-family: $paragraph-font-family;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 16px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $paragraph-color;
+        position: absolute;
+    }
+    img {
+        width: 20px;
+        padding-right: 15px;
+        // position: absolute;
+    }
+}
+.footer__info {
+    flex: 2;
+    color: $paragraph-rgba-color;
+    padding: 40px 0 0 150px;
+}
+.footer__copyright {
+    flex: 3;
+    padding: 40px 0 0 150px;
+    color: $paragraph-rgba-color;
+}
+.first_p {
+    padding-bottom: 20px;
+}
+
+// Mobile
+
+@media(max-width: 768px) {
+    .info-section__description {
+        font-size: 18px;
+    }
+    .info-section__row {
+        flex-direction: column;
+        p {
+            text-align: left;
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+    .row_first_p {
+        padding-bottom: 16px;
+    }
+    .play-button__ellipse {
+        width: 90px;
+    }
+    .play-button__polygon {
+        width: 30px;
+    }
+    .learn-more__container {
+        h1 {
+            font-size: 40px;
+        }
+        p {
+            padding-top: 55px;
+            font-family: $paragraph-font-family;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+        }
+    }
+    .footer {
+        flex-direction: column;
+    }
+    .footer__logo {
+        padding-right: 100px;
+    }
+}
