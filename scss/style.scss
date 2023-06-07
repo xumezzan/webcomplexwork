@@ -88,6 +88,18 @@ $read-more-button-color: #55C2D8;
     right: 0.01%;
     top: 0%;
     bottom: 0.01%;
+    animation-name: title;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes title {
+    from {
+        transform: rotate3d(0);
+    }
+    to {
+        transform: rotate3d(360deg);
+    }
 }
 
 .titles__heading {
